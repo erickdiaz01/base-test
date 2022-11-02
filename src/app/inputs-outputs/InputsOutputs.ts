@@ -1,13 +1,12 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
-
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
   templateUrl: './InputsOutputs.html',
-  styleUrls: ['./InputsOutputs.scss']
+  styleUrls: ['./InputsOutputs.scss'],
 })
-export class AppComponent {
-  @Input('entrada') entrada: string = 'default';
+export class InputsOutputsComponent {
+  @Input('entrada') entrada: string = 'Hola';
   @Output() salida: EventEmitter<string>;
 
   constructor() {
@@ -18,9 +17,7 @@ export class AppComponent {
     this.salida.emit(arg);
   }
 
-
   public borrarEntrada(): void {
     this.entrada = '';
   }
-
 }
